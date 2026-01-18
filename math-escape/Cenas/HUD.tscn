@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc7g8c1kkx8yq"]
+
+[ext_resource type="Script" uid="uid://fji3rqr7y0wg" path="res://Cenas/HUD.gd" id="1_j7h3y"]
+[ext_resource type="FontFile" uid="uid://cskkm3tnmjior" path="res://assets/cenário/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_equ1r"]
+[ext_resource type="Texture2D" uid="uid://dergl8tnhsoh0" path="res://assets/cenário/Basic_GUI_Bundle/ButtonsText/ButtonText_Large_Blue_Round.png" id="3_1ly0f"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_j7h3y")
+
+[node name="TimeLabel" type="Label" parent="."]
+z_index = 5
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 414.0
+offset_top = 19.0
+offset_right = 528.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_equ1r")
+theme_override_font_sizes/font_size = 24
+text = "00:00"
+
+[node name="LevelTimer" type="Timer" parent="."]
+
+[node name="ProblemLabel" type="Label" parent="."]
+z_index = 3
+texture_filter = 1
+offset_left = 43.0
+offset_top = 20.0
+offset_right = 157.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("2_equ1r")
+theme_override_font_sizes/font_size = 24
+text = "x+x=?"
+
+[node name="CountLabel" type="Label" parent="."]
+texture_filter = 1
+offset_top = 46.0
+offset_right = 158.0
+offset_bottom = 91.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(143.563, 32.875)
+scale = Vector2(0.245793, 0.185056)
+texture = ExtResource("3_1ly0f")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1049.88, 32)
+scale = Vector2(0.177524, 0.178771)
+texture = ExtResource("3_1ly0f")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+texture_filter = 1

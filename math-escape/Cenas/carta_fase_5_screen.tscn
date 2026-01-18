@@ -1,0 +1,138 @@
+[gd_scene load_steps=10 format=3 uid="uid://bg2q2kgx00j30"]
+
+[ext_resource type="Script" uid="uid://caloar0s1sp1w" path="res://Cenas/carta_final.gd" id="1_hp8bm"]
+[ext_resource type="FontFile" uid="uid://cskkm3tnmjior" path="res://assets/cenário/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="1_r3mvr"]
+[ext_resource type="Texture2D" uid="uid://2lsh3whdsucs" path="res://assets/cenário/Basic_GUI_Bundle/ButtonsText/ButtonText_Blank_OnOffBackground.png" id="2_hp8bm"]
+[ext_resource type="Texture2D" uid="uid://dqfnomuygxf2t" path="res://assets/cenário/Basic_GUI_Bundle/ButtonsText/ButtonText_Large_Blank_Square.png" id="3_2nknn"]
+[ext_resource type="Texture2D" uid="uid://mes3axkitxkb" path="res://assets/cenário/BackGround/Fase4_Sky/1.png" id="4_400ho"]
+[ext_resource type="Texture2D" uid="uid://bawv8sp4uivlh" path="res://assets/cenário/BackGround/Fase4_Sky/2.png" id="5_lxkqq"]
+[ext_resource type="Texture2D" uid="uid://msqevpgkgfgk" path="res://assets/cenário/BackGround/Fase4_Sky/3.png" id="6_omxvx"]
+[ext_resource type="Texture2D" uid="uid://b0ic0y2yqoyu4" path="res://assets/cenário/BackGround/Fase4_Sky/4.png" id="7_rdcoq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvjui"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Carta_Final" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hp8bm")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -431.0
+offset_top = 422.0
+offset_right = 461.0
+offset_bottom = 531.0
+grow_horizontal = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_r3mvr")
+theme_override_font_sizes/normal_font_size = 30
+text = "A luz da lua tem o mesmo brilho que seus olhos tinham..."
+
+[node name="Button" type="Button" parent="."]
+z_index = 2
+texture_filter = 1
+layout_mode = 0
+offset_left = 961.0
+offset_top = 586.0
+offset_right = 1136.0
+offset_bottom = 627.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_r3mvr")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_kvjui")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_kvjui")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_kvjui")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_kvjui")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kvjui")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_kvjui")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kvjui")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_kvjui")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kvjui")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_kvjui")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvjui")
+text = "CONTINUAR"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(1050, 606)
+scale = Vector2(0.623457, 0.421875)
+texture = ExtResource("2_hp8bm")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(587, 473)
+scale = Vector2(0.797909, 0.360111)
+texture = ExtResource("3_2nknn")
+
+[node name="BackGround" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="BackGround"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BackGround/ParallaxBackground"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="BackGround/ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(576, 324.388)
+scale = Vector2(2, 2.024)
+texture = ExtResource("4_400ho")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="BackGround/ParallaxBackground"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="BackGround/ParallaxBackground/ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(575, 323.888)
+scale = Vector2(2, 2.024)
+texture = ExtResource("5_lxkqq")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="BackGround/ParallaxBackground"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="BackGround/ParallaxBackground/ParallaxLayer3"]
+texture_filter = 1
+position = Vector2(575, 323.888)
+scale = Vector2(2, 2.024)
+texture = ExtResource("6_omxvx")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="BackGround/ParallaxBackground"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="BackGround/ParallaxBackground/ParallaxLayer4"]
+texture_filter = 1
+position = Vector2(575, 323.888)
+scale = Vector2(2, 2.024)
+texture = ExtResource("7_rdcoq")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

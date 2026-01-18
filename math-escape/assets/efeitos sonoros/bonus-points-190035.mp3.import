@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://gfqgcns75p1k"
+path="res://.godot/imported/bonus-points-190035.mp3-011ff2e0ce917fefd27e80aba34b85a5.mp3str"
+
+[deps]
+
+source_file="res://assets/efeitos sonoros/bonus-points-190035.mp3"
+dest_files=["res://.godot/imported/bonus-points-190035.mp3-011ff2e0ce917fefd27e80aba34b85a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

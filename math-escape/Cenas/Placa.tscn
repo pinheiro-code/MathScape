@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfjdhod1asdnk"]
+
+[ext_resource type="Script" uid="uid://c4k8fpr6spcwf" path="res://Cenas/Placa.gd" id="1_k2gba"]
+[ext_resource type="Texture2D" uid="uid://cg6a3r8wlocpk" path="res://assets/cenário/Basic_GUI_Bundle/BoxesBanners/TextBox_Blank_Side.png" id="2_uhd1e"]
+[ext_resource type="FontFile" uid="uid://cskkm3tnmjior" path="res://assets/cenário/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="3_uhd1e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2gba"]
+size = Vector2(16, 44.5)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_k2gba")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 10
+texture_filter = 1
+position = Vector2(168.876, -6.15626)
+scale = Vector2(0.249336, 0.0884864)
+texture = ExtResource("2_uhd1e")
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 10
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_k2gba")
+
+[node name="Label" type="Label" parent="."]
+z_index = 10
+texture_filter = 1
+offset_left = 35.0
+offset_top = -29.0
+offset_right = 197.0
+offset_bottom = 7.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_uhd1e")
+theme_override_font_sizes/font_size = 8
+text = "Texto Vazio"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

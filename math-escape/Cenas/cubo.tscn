@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bct8o35ybfbrd"]
+
+[ext_resource type="Script" uid="uid://dpwdntxyipg2e" path="res://Cenas/cubo.gd" id="1_smx6m"]
+[ext_resource type="Texture2D" uid="uid://bjt6e27kfahxq" path="res://assets/cenário/Basic_GUI_Bundle/ButtonsIcons/IconButton_Large_Blue_Square.png" id="1_xvd08"]
+[ext_resource type="Texture2D" uid="uid://dgrexv8neff86" path="res://assets/cenário/Basic_GUI_Bundle/Icons/Icon_Small_Key.png" id="3_4qnt3"]
+[ext_resource type="FontFile" uid="uid://cskkm3tnmjior" path="res://assets/cenário/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="4_4qnt3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3oy3l"]
+size = Vector2(16, 14)
+
+[node name="Cubo" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_smx6m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.0458683, 0.0392157)
+texture = ExtResource("1_xvd08")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-10.9008, -12.75)
+scale = Vector2(1.53729, 1.51987)
+texture = ExtResource("3_4qnt3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3oy3l")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -13.0
+offset_top = -23.0
+offset_right = 3.0
+offset_bottom = -7.0
+theme_override_colors/font_color = Color(0.702211, 0.2201, 0.941992, 1)
+theme_override_fonts/font = ExtResource("4_4qnt3")
+theme_override_font_sizes/font_size = 16
+text = "1"

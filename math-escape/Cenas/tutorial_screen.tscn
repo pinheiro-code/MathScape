@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxfdjkrlydxc1"]
+
+[ext_resource type="Script" uid="uid://b1u0j06vep54c" path="res://Cenas/tutorial_screen.gd" id="1_ls2ii"]
+[ext_resource type="FontFile" uid="uid://cskkm3tnmjior" path="res://assets/cenário/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_8opay"]
+[ext_resource type="Texture2D" uid="uid://bfokrl0ki2pb1" path="res://assets/cenário/Basic_GUI_Bundle/BoxesBanners/Box_Orange_Rounded.png" id="2_trvya"]
+[ext_resource type="Texture2D" uid="uid://2lsh3whdsucs" path="res://assets/cenário/Basic_GUI_Bundle/ButtonsText/ButtonText_Blank_OnOffBackground.png" id="4_wajgp"]
+[ext_resource type="Texture2D" uid="uid://dqfnomuygxf2t" path="res://assets/cenário/Basic_GUI_Bundle/ButtonsText/ButtonText_Large_Blank_Square.png" id="5_wajgp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqw0k"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="TutorialScreen" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ls2ii")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(574, 330.5)
+scale = Vector2(1, 0.54106)
+texture = ExtResource("2_trvya")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -529.0
+offset_top = 79.0
+offset_right = 569.0
+offset_bottom = 397.0
+grow_horizontal = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_8opay")
+theme_override_font_sizes/normal_font_size = 30
+text = "Bem-vindo ao Math Escape.
+
+WASD - Para se movimentar para cima, baixo, esquerda ou direita.
+
+Você precisará resolver algumas contas e coletar o número de recursos necessários para passar de fase.
+
+Lembre-se, o tempo corre contra você."
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 821.0
+offset_top = 512.0
+offset_right = 1135.0
+offset_bottom = 631.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8opay")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_mqw0k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_mqw0k")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mqw0k")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mqw0k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mqw0k")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mqw0k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mqw0k")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mqw0k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mqw0k")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_mqw0k")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mqw0k")
+text = "CONTINUAR"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(978, 572)
+texture = ExtResource("4_wajgp")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(578, 237)
+scale = Vector2(0.970383, 0.99723)
+texture = ExtResource("5_wajgp")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

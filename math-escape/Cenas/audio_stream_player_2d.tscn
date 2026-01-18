@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlumk8pq6vnxs"]
+
+[ext_resource type="AudioStream" uid="uid://cce4qoq3up57y" path="res://assets/efeitos sonoros/Final_Music.MP3" id="1_55q45"]
+
+[node name="FinalMusicPlayer" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_55q45")

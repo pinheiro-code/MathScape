@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://svj5jgh4h3w"]
+
+[ext_resource type="AudioStream" uid="uid://bmvjyw65fgx3h" path="res://assets/efeitos sonoros/05 Ruins.mp3" id="1_8q8w4"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_8q8w4")
+volume_db = -20.065
+autoplay = true

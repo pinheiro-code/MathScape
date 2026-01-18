@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://do6y665t641dg"
+path="res://.godot/imported/wrong-buzzer-6268.mp3-ed5ed01cbc314afd5d50dc90100bc983.mp3str"
+
+[deps]
+
+source_file="res://assets/efeitos sonoros/wrong-buzzer-6268.mp3"
+dest_files=["res://.godot/imported/wrong-buzzer-6268.mp3-ed5ed01cbc314afd5d50dc90100bc983.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

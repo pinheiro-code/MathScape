@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://wmunl50wigf"]
+
+[ext_resource type="Script" uid="uid://bokj73ibf2p50" path="res://Cenas/espinho.gd" id="1_t8rob"]
+[ext_resource type="Texture2D" uid="uid://dreu7dnry8srg" path="res://assets/LonelySpike_png_Sprite.png" id="2_t8rob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mtwf"]
+size = Vector2(31, 13)
+
+[node name="Espinho" type="Area2D"]
+script = ExtResource("1_t8rob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.5, 1.5)
+shape = SubResource("RectangleShape2D_4mtwf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 24.0
+offset_bottom = 8.0
+texture = ExtResource("2_t8rob")
+expand_mode = 1
+stretch_mode = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

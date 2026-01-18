@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://cri7uqnrchyah"]
+
+[ext_resource type="FontFile" uid="uid://cskkm3tnmjior" path="res://assets/cenário/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="1_ctxy2"]
+[ext_resource type="Script" uid="uid://bu64625kl1br6" path="res://Cenas/carta_fase_2_screen.gd" id="1_jfax3"]
+[ext_resource type="Texture2D" uid="uid://2lsh3whdsucs" path="res://assets/cenário/Basic_GUI_Bundle/ButtonsText/ButtonText_Blank_OnOffBackground.png" id="2_jfax3"]
+[ext_resource type="Texture2D" uid="uid://dqfnomuygxf2t" path="res://assets/cenário/Basic_GUI_Bundle/ButtonsText/ButtonText_Large_Blank_Square.png" id="3_n7bdm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs6j1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Carta_Fase2_Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jfax3")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -534.0
+offset_top = 74.0
+offset_right = 544.0
+offset_bottom = 355.0
+grow_horizontal = 2
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_colors/table_even_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/table_odd_row_bg = Color(0, 0, 0, 1)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/selection_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_ctxy2")
+theme_override_font_sizes/normal_font_size = 30
+text = "O sol continua tão quente quanto naquele dia."
+
+[node name="Button" type="Button" parent="."]
+z_index = 2
+texture_filter = 1
+layout_mode = 0
+offset_left = 816.0
+offset_top = 507.0
+offset_right = 1130.0
+offset_bottom = 626.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ctxy2")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxFlat_xs6j1")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_xs6j1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xs6j1")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_xs6j1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_xs6j1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_xs6j1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xs6j1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_xs6j1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xs6j1")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_xs6j1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xs6j1")
+text = "CONTINUAR"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(973, 567)
+texture = ExtResource("2_jfax3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(573, 205.5)
+scale = Vector2(0.970383, 0.850416)
+texture = ExtResource("3_n7bdm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.215686, 0.101961, 0.278431, 1)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

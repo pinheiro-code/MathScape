@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2wl2voc815lt"]
+
+[ext_resource type="Script" uid="uid://dbsf8v06kakwy" path="res://Cenas/question_ui.gd" id="1_q8or6"]
+
+[node name="QuestionUI" type="Panel"]
+z_index = 3
+offset_left = -148.0
+offset_top = -72.0
+offset_right = 151.0
+offset_bottom = 73.0
+script = ExtResource("1_q8or6")
+
+[node name="Label" type="Label" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 76.0
+offset_top = 106.0
+offset_right = 216.0
+offset_bottom = 129.0
+text = "Voce tem certeza?"
+
+[node name="Option1Button" type="Button" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 13.0
+offset_top = 16.0
+offset_right = 139.0
+offset_bottom = 47.0
+text = "Primeira opcao"
+
+[node name="Option2Button" type="Button" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 160.0
+offset_top = 16.0
+offset_right = 286.0
+offset_bottom = 47.0
+text = "Segunda opcao"
